@@ -3,6 +3,8 @@ timeout 15
 preload_app true
 listen "/tmp/unicorn.app200.sock"
 pid "tmp/pids/unicorn.pid"
+root "/home/trejo08/test_nginx/app200"
+working_directory root
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
