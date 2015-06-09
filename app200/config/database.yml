@@ -14,8 +14,8 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: trejo08
+  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: app200_production
-  username: app200
-  password: <%= ENV['APP200_DATABASE_PASSWORD'] %>
+  username: root
+  password: trejo08
