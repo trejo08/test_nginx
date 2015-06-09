@@ -1,7 +1,7 @@
 worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 15
 preload_app true
-listen "/tmp/unicorn.#{Rails.application.class.parent_name}.sock"
+listen "/tmp/unicorn.app221.sock"
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
